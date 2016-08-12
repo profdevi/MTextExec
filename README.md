@@ -1,5 +1,57 @@
+MTextExec is a program that permits the user to embed commands in 
+source code.  The standard output of the commands replace the text
+in the source files.  The intent of this program is to permit
+the inclusion of programatic generated text into source programs
+written in shell script/C/C++/Python/Latex and HTML/...
+
+
+Example Usage: 
+----------
+
+Source File : one.htm:
+
+	<html>
+	<body>
+	<!--execbegin ls -l>
+	<!--execend -->
+
+
+	</body>
+	</html> 
+	
+The command **ls -l** will print out the contents of the current 
+directory.  When you run the command **mtextexec -w one.htm**, 
+the program modifies the one.htm file to
+	
+	<html>
+	<body>
+	<!--execbegin ls -l>
+	.
+	..
+	a.txt
+	b.txt
+	...
+	...
+	<!--execend -->
+
+
+	</body>
+	</html> 
+
+
+If you run the command **mtextexec -w -c one.htm**, the file is reset
+back to the original.
+	
+
+Build Instructions
+-------------------
+
 Use NMake to build the windows version of the program.
 Switch to the src folder and compile with NMake.
+
+
+Windows Executable
+-------------------
 
 bin/MTextExec.exe      	: precompiled version for windows 10/64 bit
 bin/MTextExec.exe.md5	: MD5 Digest of the executable
