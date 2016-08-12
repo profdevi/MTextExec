@@ -1,0 +1,7 @@
+TODO
+----
+
+1.  Convert Make files to CMake
+2.  Add Linux and Mac OS to development tree
+
+
