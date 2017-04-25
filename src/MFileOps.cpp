@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 
-//v1.47 copyright Comine.com 20160621T1058
+//v1.49 copyright Comine.com 20170406R1314
 #include "MStdLib.h"
 
 //////////////////////////////////////////////
@@ -1491,7 +1491,7 @@ bool MFileOps::WriteTextFile(const char *filename,const char *data)		// Create f
 	if(len==0)
 		{
 		MStdFileClose(file);
-		return false;		
+		return true;		
 		}
 
 	if(MStdFileWrite(file,data,1,len)!=len)
@@ -2090,7 +2090,7 @@ bool MFileOps::SetSize(const char *filename,int newsize)
 	for(i=0;i<newsize;++i)
 		{
 		char buf;
-		if(fin.Read(&buf,1)==false)
+		if(fin.Read((void *)&buf,1)==false)
 			{
 			fout.Destroy();
 			Delete(tmpfile.Get());

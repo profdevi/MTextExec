@@ -50,11 +50,15 @@ Use NMake to build the windows version of the program.
 Switch to the src folder and compile with NMake.
 
 
-Windows Executable
--------------------
+## Download Links 
 
-bin/MTextExec.exe      	: precompiled version for windows 10/64 bit
-bin/MTextExec.exe.md5	: MD5 Digest of the executable
+The following links is for the direct download of the 32 bit executable with
+an MD5 digest of the executable.
+
+Windows 32-bit Binary : [MTextExec.exe](bin/MTextExec.exe)
+
+MD5 Digest for binary : [MTextExec.exe.md5](bin/MTextExec.exe.md5)
+
 
 
 ## License
